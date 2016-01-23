@@ -8,9 +8,10 @@ Thunderbird but use an iPhone, this script is for you.
 Prerequisites
 -------------
 
-You'll need Python 2.7 or later and the vobject package, available on
-PyPI at [link](https://pypi.python.org/pypi/vobject/) .  Actually it
-may work with earlier versions of Python but I haven't tried it.
+You'll need Python 2.7 or later and the
+[vobject package on PyPI](https://pypi.python.org/pypi/vobject/) .
+Actually it may work with earlier versions of Python but I haven't
+tried it.
 
 Once you've got that, clone this repository and move the *ldif2vc3.py*
 script to your $HOME/bin directory.  Gee, I guess I'm kind of assuming
@@ -28,27 +29,27 @@ How To Use It
  7. Open the Contacts app.
  8. Optional: Click on the "gear" symbol in the lower left corner and choosing *Export vCard...* to save your current Apple contacts.
  9. Click on the "gear" and choose *Select All*
-10. Click on the "gear" and choose *Delete* .  Goodbye, old Apple contacts!
-11. Click on the "gear" and choose *Import vCard...*
-12. Upload the *myaddrs.vcf* file you saved earlier.
+ 10. Click on the "gear" and choose *Delete* .  Goodbye, old Apple contacts!
+ 11. Click on the "gear" and choose *Import vCard...*
+ 12. Upload the *myaddrs.vcf* file you saved earlier.
 
 That's it!  You've wiped your previous Apple contacts (first saving a
 copy, because you are a careful frood) and replaced them with your
 Thunderbird contact list.
 
-Screen Out Calls From Telemarketers, Phishers, Scammers, and other Scum
------------------------------------------------------------------------
+Screen Out Calls From Telemarketers and Other Evildoers
+-------------------------------------------------------
 
 Wouldn't it be great if you could silence incoming phone calls from
 numbers not in your address book?  (Why oh why doesn't Apple provide
-this feature?  Sigh.)  Well, now you can do it.  
+this feature?  *Sigh.*)  Well, now you can do it.  
 
 The first step is to download and install a silent ringtone as the
 default ringtone on your iPhone.  The second step is to use
-ldif2vc3.py's -r/--ringtone option when doing your LDIF-to-vCard
+ldif2vc3.py's *-r/--ringtone* option when doing your LDIF-to-vCard
 conversion:
 
-   $ ldif2vc3.py -r "Slow Rise" myaddrs.ldif > myaddrs.vcf
+   *$ ldif2vc3.py -r "Slow Rise" myaddrs.ldif > myaddrs.vcf*
 
 This marks every vCard that does not have an explicitly set ringtone
 with the *Slow Rise* ringtone.  Hence every entry in *myaddrs.vcf*
